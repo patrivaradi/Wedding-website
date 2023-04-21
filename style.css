@@ -235,7 +235,7 @@ hr.three {
   width: 100%;
   background: #03414b;
   color: aliceblue;
-  height: 100vh;
+  height: 100%;
 }
 .about-us-text {
   width: 100%;
@@ -293,7 +293,7 @@ hr.three {
   border: 5px double #ffffff;
 }
 /* RESPONSIVE */
-@media (max-width: 768px) {
+@media (max-width: 820px) {
   /* .about-us{
         height: 60vh;
     } */
