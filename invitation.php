@@ -1,7 +1,8 @@
+
 <!-- Invitation -->
 <div class="invitation" id="invitation" >
         <!-- <button class="party">Party!!</button> -->
-        <h1 class="invite-names">Jim & Pam</h1>
+        <div class="invite-names">Jim & Pam</div>
         <p class="invite-text">Are getting married!<br>
             <span class="invite-date">21st of september 2023</span><br>
         </p>

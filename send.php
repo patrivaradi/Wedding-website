@@ -16,7 +16,7 @@ include('header.php');
                 <input id="form-mail" name="email" type="email" placeholder="E-mail"/>
                 <div class="error-hint" id="email-error"></div>
                 
-                <input id="form-nr" name="number" type="number" placeholder="Nr of attendes"/>
+                <input id="form-nr" name="number" type="number" placeholder="Nr of attendees"/>
                 <div class="error-hint"  id="number-error"></div>
                 
                 <input id="form-text" name="message" type="text" placeholder="Send us a message, request a song.." />

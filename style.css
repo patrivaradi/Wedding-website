@@ -136,6 +136,8 @@ header {
   background-color: rgba(12, 98, 112, 0.555);
   width: 100%;
   height: 100vh;
+  animation: slide_up 1.5s ease;
+  -webkit-animation: slide_up 1.5s ease;
 }
 .invite-names {
   font-size: 80px;
@@ -162,6 +164,17 @@ header {
   font-size: 40px;
   font-weight: 600;
 }
+@keyframes slide_up {
+  0% {
+    transform: translateY(250px);
+    -webkit-transform: translateY(250px);
+  }
+  100% {
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+  }
+}
+
 hr {
   height: 55px;
   margin: 0;
