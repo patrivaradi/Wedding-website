@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -21,6 +21,45 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <title>Wedding website</title>
 </head>
+<body>
+    <div class="first-page">
+        <form>
+        <div class="password-div">
+        <div class="password-text">Please input the password given to you in your invitation.</div>
+        <input id="pass" name="pass" type="password" placeholder="password"/>
+        <button class="button" id="button" type="submit" >Submit</button>
+        </div>
+        </form>
+    </div>
+
+<script>
+    $("#button").on("click", function (e) {
+        console.log("pass");
+    e.preventDefault(); // prevent default form submission behavior
+    var pass = $("#pass").val();
+        $.ajax({
+      type: "POST",
+      url: "http://localhost/Licenta-Varadi_Patricia2023/passcheck.php",
+      data: {pass:pass},
+      success: function (response) {
+        if(response == "ok"){
+        window.location.href = "http://localhost/Licenta-Varadi_Patricia2023/index.php";
+        }
+        else if (response == "no")
+        {
+            alert("Invalid password!");
+            $("#pass").val("");
+        }
+      }
+    });
+    // 
+    });
+</script>
+
+
+
+</body>
+</html>
