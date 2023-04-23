@@ -3,11 +3,8 @@ $nameErr = $emailErr = $numberErr ="";
    $name = $email =$number="";
    $errors = '';
    
-   
-   
    if($_SERVER["REQUEST_METHOD"]=="POST"){
         
-       
     $host = "localhost";
     $user = "root";
     $pass = "";
@@ -20,8 +17,11 @@ $nameErr = $emailErr = $numberErr ="";
     $name =mysqli_real_escape_string($con,$_POST['name']);
     $email = mysqli_real_escape_string($con,$_POST['email']);
     $number = mysqli_real_escape_string($con,$_POST['number']);
+    $others = mysqli_real_escape_string($con,$_POST['others']);
     $message = mysqli_real_escape_string($con,$_POST['message']);
-    $qry = "INSERT INTO `rsvp`(`name`, `email`, `attends`,`message`) VALUES ('$name','$email','$number','$message')";
+    $food = mysqli_real_escape_string($con,$_POST['food']);
+
+    $qry = "INSERT INTO `rsvp`(`name`, `email`, `attends`, `others-names`, `message`, `food-preference`) VALUES ('$name','$email','$number','$others','$message','$food')";
     $insert = mysqli_query($con,$qry);
     if(!$insert){
         echo "There are some problems";

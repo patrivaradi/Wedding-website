@@ -579,6 +579,9 @@ textarea {
   position: relative;
   padding: 50px;
 }
+.others-names {
+  display: none;
+}
 .close {
   position: absolute;
   top: 0;

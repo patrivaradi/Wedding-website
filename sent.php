@@ -11,8 +11,7 @@
         }
         $name =mysqli_real_escape_string($con,$_POST['name']);
         $email = mysqli_real_escape_string($con,$_POST['email']);
-        $number = mysqli_real_escape_string($con,$_POST['number']);
-        $message = mysqli_real_escape_string($con,$_POST['message']);
+        
         $query = "SELECT * FROM `rsvp` WHERE `name`='$name' AND `email`='$email'";
         $result=$con->query($query);
         

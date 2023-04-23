@@ -19,24 +19,46 @@ include('header.php');
                 <input id="form-nr" name="number" type="number" placeholder="Nr of attendees"/>
                 <div class="error-hint"  id="number-error"></div>
                 
+                <div class="others-names">
+                <input id="form-other-names" name="other-names" type="text" placeholder="List names of others attending"/>
+                </div>
+                
                 <input id="form-text" name="message" type="text" placeholder="Send us a message, request a song.." />
+                
+                <input id="form-food" name="food" type="text" placeholder="List any food restrictions" />
+
                 <button class="rsvp-button" id="submit-button" type="submit" >Submit</button>
             </div>
         </form>
     </div>
 </div>
 <script>
-    
+
+// ---------showing input field only if necessary----------
+$("#form-nr").on("input",function(){
+  var number = $(this).val();
+  var othersNames = $(".others-names");
+  if(number>1){
+    othersNames.show();
+  }
+  else{
+    othersNames.hide();
+  }
+});
+
 //-----------Validating rsvp <form> and inserting in database-------------------
+
 $("#submit-button").on("click", function (e) {
   e.preventDefault(); // prevent default form submission behavior
 
   var name = $("#form-name").val();
   var email = $("#form-mail").val();
   var number = $("#form-nr").val();
+  var others = $("#form-other-names").val();
   var message = $("#form-text").val();
+  var food = $("#form-food").val();
   var isValid = true;
-  
+
   var namePattern = /^[a-zA-Z\s]+$/;
   if (!name) {
     $("#name-error").text("Please enter your name");
