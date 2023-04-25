@@ -12,6 +12,7 @@
         $pass =$_POST['pass'];
         $pass = strip_tags($pass);
         $pass = trim($pass);
+        $pass = md5($pass);
         $pass = mysqli_real_escape_string($con,$pass);
         $query = "SELECT `pass` FROM `passwords` WHERE `name`='invited'";
         $result=$con->query($query);
