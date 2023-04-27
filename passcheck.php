@@ -1,14 +1,6 @@
 <?php
  if($_SERVER["REQUEST_METHOD"]=="POST"){
-        $host = "localhost";
-        $user = "root";
-        $pass = "";
-        $db = "wedding-website";
-
-        $con = new mysqli($host,$user,$pass,$db);
-        if (!$con){
-            echo  "Error connecting to the database.";
-        }
+        include "db_connection.php";
         $pass =$_POST['pass'];
         $pass = strip_tags($pass);
         $pass = trim($pass);

@@ -1,14 +1,6 @@
 <?php   
    if($_SERVER["REQUEST_METHOD"]=="POST"){               
-    $host = "localhost";
-    $user = "root";
-    $pass = "";
-    $db = "wedding-website";
-
-    $con = new mysqli($host,$user,$pass,$db);
-    if (!$con){
-        echo  "Error connecting to the database.";
-    }
+    include "db_connection.php";
     $name =mysqli_real_escape_string($con,$_POST['name']);
     $email = mysqli_real_escape_string($con,$_POST['email']);
     $number = mysqli_real_escape_string($con,$_POST['number']);

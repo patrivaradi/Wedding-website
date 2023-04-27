@@ -15,10 +15,10 @@ include('gallery.php');
         <p class="rsvp-text">Kindly responde by<br> <span class="invite-date">August, 2023</span></p>
         <button class="rsvp-button" id="rsvpButton" onclick="window.open('send.php','_self');">RSVP</button>
     </div>
-
+<hr class="five" id="footer-section"/>
     <!-- Contact section -->
     <footer>
-        <img src="./images/logo.png">
+        <img src="./images/logo.png" style="size:65px">
         <p>foooter</p>
 
     </footer>
