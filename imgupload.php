@@ -35,21 +35,12 @@ if($error === 0){
             $error_message ="You can't upload files of this type!";
             header("location:index.php?error=$error_message");
         }
-
     }
-
-
-
 }else {
     $error_message ="unknown error occured";
     header("location:index.php?error=$error_message");
 }
-
-
 }else{
     header("location:index.php#gallery-section");
 }
-
-
-
 ?>

@@ -42,4 +42,4 @@
         </div>
     </div>
 </div>
-<hr class="three" id="location-section"/>
+<hr class="two" id="location-section"/>

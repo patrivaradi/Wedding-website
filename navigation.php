@@ -18,8 +18,10 @@
         <div class="dropdown-menu">
             <li ><a href="#home-section" class="nav-link">Home</a></li>
             <li ><a href="#about-us-section" class="nav-link">About Us</a></li>
+            <li ><a href="#location-section" class="nav-link">Location</a></li>
             <li ><a href="#gallery-section" class="nav-link">Gallery</a></li>
             <li ><a href="#rsvp-section" class="nav-link">RSVP</a></li>
+            <li ><a href="#footer-section" class="nav-link">Footer</a></li>
         </div>
         </div>
     </header>

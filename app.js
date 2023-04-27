@@ -57,35 +57,6 @@ function four() {
   }
 }
 
-// -----------------Countdown-------------------------
-var countDownDate = new Date("Sep 21, 2023 12:00:00").getTime();
-var countDDays = document.getElementById("days");
-var countDHours = document.getElementById("hours");
-var countDMinutes = document.getElementById("minutes");
-var countDSeconds = document.getElementById("seconds");
-var x = setInterval(function () {
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
-
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  countDDays.innerHTML = days;
-  countDHours.innerHTML = hours;
-  countDMinutes.innerHTML = minutes;
-  countDSeconds.innerHTML = seconds;
-
-  if (distance < 0) {
-    clearInterval(x);
-    countDDays.innerHTML = "00";
-    countDHours.innerHTML = "00";
-    countDMinutes.innerHTML = "00";
-    countDSeconds.innerHTML = "00";
-  }
-}, 1000);
-
 // -------------------About us section change of stories--------------
 const aboutHerPics = document.getElementById("about-img-her");
 const aboutHimPics = document.getElementById("about-img-him");

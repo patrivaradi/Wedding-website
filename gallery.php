@@ -8,6 +8,15 @@
             <button class="btn active" onclick="two()">2</button>
             <button class="btn active" onclick="four()">4</button>
         </div>
+
+        <?php if (isset($_GET['error'])): ?>
+            <p><?php echo $_GET['error'];?></p>
+        <?php endif ?>
+        <form action="imgupload.php" method="post" enctype="multipart/form-data">
+            <input id="uplimg" type="file" name="uplimg" multiple>
+            <input id="uplsubmit" type="submit" name="submit" value="Upload">
+
+        </form>
     <!--Photo grid-->
     <div class="row" >
     <?php
@@ -22,14 +31,5 @@
 <?php }
        }?> 
         </div>
-        <?php if (isset($_GET['error'])): ?>
-            <p><?php echo $_GET['error'];?></p>
-        <?php endif ?>
-        <form action="imgupload.php" method="post" enctype="multipart/form-data">
-            <input type="file" name="uplimg" multiple>
-            <input type="submit" name="submit" value="Upload">
-
-        </form>
-
     </div>
     <hr class="four" id="rsvp-section" />

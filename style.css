@@ -125,6 +125,30 @@ header {
   }
 }
 /* INVITATION */
+.edit-button {
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+  padding-left: 42px;
+  padding-right: 42px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 12px;
+  background-color: #9ab8ba;
+  border-style: none;
+  box-shadow: 1px 1px 10px 1px #13282b;
+}
+.edit-button:hover {
+  color: #9ab8ba;
+  background-color: #13282b;
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+  box-shadow: 0 0 10px 1px #9ab8ba;
+}
+
 .invitation {
   position: relative;
   display: flex;
@@ -202,13 +226,13 @@ hr.two {
   background: linear-gradient(#41818b, rgba(12, 98, 112, 0.5));
 }
 hr.three {
-  background: linear-gradient(rgba(12, 98, 112, 0.5), #376167);
+  background: linear-gradient(rgba(12, 98, 112, 0.5), rgba(12, 98, 112, 0.2));
 }
 hr.four {
-  background: linear-gradient(#41818b, rgba(12, 98, 112, 0.5));
+  background: linear-gradient(rgba(12, 98, 112, 0.2), #37616798);
 }
 hr.five {
-  background: linear-gradient(#41818b, rgba(12, 98, 112, 0.5));
+  background: linear-gradient(#37616798, #ffffff);
 }
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -290,15 +314,15 @@ hr.five {
 }
 .about-text.active-text {
   display: block;
-  animation: moveup 3s linear forwards;
-  -webkit-animation: moveup 3s linear forwards;
+  animation: moveup 2s linear forwards;
+  -webkit-animation: moveup 2s linear forwards;
 }
 @keyframes moveup {
   0% {
-    color: #03414b;
+    color: #41818b;
   }
   100% {
-    color: #ffffff;
+    color: rgb(242, 245, 248);
   }
 }
 .about-pic {
@@ -319,7 +343,7 @@ hr.five {
 .about-image.active-pic {
   width: 175px;
   height: 175px;
-  border: 5px double #ffffff;
+  border: 5px double rgb(242, 245, 248);
 }
 /* RESPONSIVE */
 @media (max-width: 820px) {
@@ -403,14 +427,34 @@ hr.five {
 }
 #specifics a {
   text-decoration: none;
-  border: 2px solid #9ab8ba42;
+  border: 2px solid #ffffff42;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   background-color: #9ab8ba42;
   color: #13282b;
   padding: 5px 15px;
 }
-
+/* RESPONSIVE */
+@media (max-width: 820px) {
+  .location-heading {
+    font-size: 55px;
+  }
+  #specifics {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 576px) {
+  .location-heading {
+    font-size: 40px;
+  }
+  #details {
+    width: 100%;
+  }
+  #specifics {
+    font-size: 16px;
+  }
+}
 /* GALLERY STYLING */
 .gallery-section {
   display: flexbox;
@@ -450,6 +494,25 @@ hr.five {
   vertical-align: middle;
   height: -webkit-fill-available;
 }
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+#uplimg {
+  color: #41818b;
+  width: 200px;
+}
+#uplsubmit {
+  background-color: #6da7b0;
+  border: 1px solid #03414b;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .gallery-header h1 {
@@ -482,7 +545,7 @@ hr.five {
   display: flex;
   padding: 100px;
   width: 100%;
-  background-color: #376167;
+  background-color: #37616798;
   text-align: center;
   position: relative;
   justify-content: center;
@@ -607,7 +670,7 @@ textarea {
   border-radius: 10px;
 }
 .form-group {
-  height: 380px;
+  height: 500px;
   width: 500px;
   position: absolute;
   background-color: aliceblue;
@@ -655,14 +718,45 @@ input.invalid {
 }
 @media (max-width: 576px) {
   .form-group {
-    height: 400px;
+    height: 550px;
     width: 300px;
   }
   #submit-button {
     font-size: 20px;
-    margin-top: 25px;
+    margin-top: 35px;
   }
   ::placeholder {
     font-size: 12px;
+  }
+}
+footer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #02232c;
+  padding: 25px;
+}
+footer img {
+  margin: 10px;
+  width: 250px;
+  border-radius: 110%;
+  -webkit-border-radius: 110%;
+  -moz-border-radius: 110%;
+  -ms-border-radius: 110%;
+  -o-border-radius: 110%;
+  animation: spin 9000ms linear infinite;
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }

@@ -29,4 +29,4 @@
         </div>
     </div>
 </div>
-<hr class="two" id="gallery-section"/>
+<hr class="three" id="gallery-section"/>

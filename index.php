@@ -19,7 +19,7 @@ include('gallery.php');
     <!-- Contact section -->
     <footer>
         <img src="./images/logo.png" style="size:65px">
-        <p>foooter</p>
+        <p>Website made by Varadi Patricia</p>
 
     </footer>
 
