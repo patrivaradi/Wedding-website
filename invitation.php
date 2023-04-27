@@ -3,7 +3,7 @@ include('db_connection.php');
 ?>
 <!-- Invitation -->
 <div class="invitation" id="invitation" >
-    <button class="edit-button" id="rsvpButton" onclick="window.open('edit.php','_self');">Edit</button>
+    <button class="edit-button" id="rsvpButton" onclick="window.open('edit_invite.php','_self');">Edit</button>
     <!-- <button class="party">Party!!</button> -->
     <?php
     $sql="SELECT * FROM `invitation`";

@@ -126,27 +126,26 @@ header {
 }
 /* INVITATION */
 .edit-button {
-  align-items: center;
+  position: absolute;
+  top: 10px;
+  right: 20px;
   font-size: 20px;
   font-weight: 600;
-  padding-left: 42px;
-  padding-right: 42px;
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 15px 40px;
   border-radius: 12px;
   background-color: #9ab8ba;
   border-style: none;
-  box-shadow: 1px 1px 10px 1px #13282b;
+  box-shadow: 1px 1px 1px 1px #13282b;
 }
 .edit-button:hover {
   color: #9ab8ba;
   background-color: #13282b;
-  transition: 1s ease;
-  -webkit-transition: 1s ease;
-  -moz-transition: 1s ease;
-  -ms-transition: 1s ease;
-  -o-transition: 1s ease;
-  box-shadow: 0 0 10px 1px #9ab8ba;
+  transition: 0.5s ease;
+  -webkit-transition: 0.5s ease;
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  box-shadow: 0 0 1px 1px #9ab8ba;
 }
 
 .invitation {
@@ -283,6 +282,9 @@ hr.five {
     align-items: center;
     justify-content: center;
 } */
+.about-us-container {
+  position: relative;
+}
 .about-us {
   margin: auto;
   width: 100%;
@@ -409,6 +411,7 @@ hr.five {
 /* LOCATION STYLING */
 .location-container {
   padding: 25px;
+  position: relative;
   background-color: rgba(12, 98, 112, 0.5);
 }
 .location-heading {
@@ -668,6 +671,28 @@ textarea {
   padding: 8px;
   border: 1px solid #13282b;
   border-radius: 10px;
+}
+.form-about input,
+textarea {
+  width: 100%;
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid #13282b;
+  border-radius: 10px;
+}
+.form-about {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 20px;
+  position: relative;
+  padding: 50px;
+}
+.form-about label {
+  display: flex;
 }
 .form-group {
   height: 500px;

@@ -20,7 +20,7 @@ include('header.php');
 </div>
 <script>
 
-//-----------Validating edit <form> and inserting in database-------------------
+//-----------Insert edit <form> in database-------------------
 
 $("#submit-button").on("click", function (e) {
   e.preventDefault(); // prevent default form submission behavior
@@ -29,7 +29,6 @@ $("#submit-button").on("click", function (e) {
   var text = $("#edit-text").val();
   var date = $("#edit-date").val();
 
-// User clicked "OK"
     $.ajax({
         type: "POST",
         url: "http://localhost/Licenta-Varadi_Patricia2023/editinvite.php",

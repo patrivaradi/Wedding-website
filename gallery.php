@@ -13,9 +13,8 @@
             <p><?php echo $_GET['error'];?></p>
         <?php endif ?>
         <form action="imgupload.php" method="post" enctype="multipart/form-data">
-            <input id="uplimg" type="file" name="uplimg" multiple>
+            <input id="uplimg" type="file" name="uplimg">
             <input id="uplsubmit" type="submit" name="submit" value="Upload">
-
         </form>
     <!--Photo grid-->
     <div class="row" >

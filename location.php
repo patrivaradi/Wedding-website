@@ -1,5 +1,6 @@
 <!-- Location section -->
 <div class="location-container">
+    <button class="edit-button" id="editButton" onclick="window.open('edit_location.php','_self');">Edit</button>
     <div class="location-heading">
         <p>Weekend Events</p>
     </div>
