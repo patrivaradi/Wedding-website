@@ -1,7 +1,7 @@
 <!-- Location section -->
 <div class="location-container">
     <?php if ($is_admin): ?>
-    <button class="edit-button" id="editButton" onclick="window.open('edit_location.php','_self');">Edit</button>
+    <button class="edit-button" id="editButton" onclick="window.open('edit_location.php','_self');">Edit event details</button>
     <?php endif; ?>
     <div class="location-heading">
         <p>Weekend Events</p>

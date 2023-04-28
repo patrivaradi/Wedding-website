@@ -1,7 +1,7 @@
 <!-- Invitation -->
 <div class="invitation" id="invitation" >
     <?php if ($is_admin): ?>
-    <button class="edit-button" id="rsvpButton" onclick="window.open('edit_invite.php','_self');">Edit</button>
+    <button class="edit-button" id="rsvpButton" onclick="window.open('edit_invite.php','_self');">Edit invitation</button>
     <?php endif; ?>
     <!-- <button class="party">Party!!</button> -->
     <?php

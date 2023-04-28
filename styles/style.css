@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", serif;
+}
+body {
+  height: 100vh;
+  width: fit-content;
+}
+hr {
+  height: 55px;
+  margin: 0;
+  border: 0;
+  padding: 0;
+  opacity: 100;
+}
+hr.zero {
+  background: linear-gradient(#ffffff, #a6cfd5);
+}
+hr.one {
+  background: linear-gradient(#a6cfd5, #41818b);
+}
+hr.two {
+  background: linear-gradient(#41818b, rgba(12, 98, 112, 0.5));
+}
+hr.three {
+  background: linear-gradient(rgba(12, 98, 112, 0.5), rgba(12, 98, 112, 0.2));
+}
+hr.four {
+  background: linear-gradient(rgba(12, 98, 112, 0.2), #37616798);
+}
+hr.five {
+  background: linear-gradient(#37616798, #ffffff);
+}
+/* FORM STYLING */
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.form-about input,
+textarea {
+  width: 100%;
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 8px;
+  border: 1px solid #13282b;
+  border-radius: 10px;
+}
+.form-about {
+  height: fit-content;
+  width: 500px;
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 20px;
+  position: relative;
+  padding: 50px;
+}
+.form-about label {
+  display: flex;
+}
+form {
+  align-items: center;
+  padding: 0 50px;
+}
+.form-group input,
+textarea {
+  width: 100%;
+  position: relative;
+  display: block;
+  margin: 18px 0 auto;
+  padding: 8px;
+  border: 1px solid #13282b;
+  border-radius: 10px;
+}
+.form-group {
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  background-color: aliceblue;
+  border-radius: 20px;
+  position: relative;
+  padding: 50px;
+}
+.others-names {
+  display: none;
+}
+.close {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #13282b;
+  transform: rotate(45deg);
+  cursor: pointer;
+}
+.close:hover {
+  color: #13282b;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+input.invalid {
+  border: 1px solid rgb(193, 28, 28);
+}
+.error-hint {
+  font-size: 12px;
+  color: rgb(193, 28, 28);
+  position: absolute;
+}
+::placeholder {
+  font-size: 25px;
+}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  #submit-button {
+    font-size: 20px;
+  }
+  ::placeholder {
+    font-size: 18px;
+  }
+}
+@media (max-width: 576px) {
+  .form-group {
+    height: 550px;
+    width: 300px;
+  }
+  #submit-button {
+    font-size: 20px;
+    margin-top: 35px;
+  }
+  ::placeholder {
+    font-size: 12px;
+  }
+}

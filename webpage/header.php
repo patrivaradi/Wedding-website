@@ -21,6 +21,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styleNavigation.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styleInvitation.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styleAboutUs.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styleLocation.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styleGallery.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styleRSVP.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styleFooter.css">
+
     <title>Wedding website</title>
 </head>

@@ -21,7 +21,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="../styles/styleFirstPage.css">
     <title>Wedding website</title>
 </head>
 <body>
@@ -42,11 +42,11 @@
     var pass = $("#pass").val();
         $.ajax({
       type: "POST",
-      url: "http://localhost/Licenta-Varadi_Patricia2023/passcheck.php",
+      url: "http://localhost/Licenta-Varadi_Patricia2023/webpage/passcheck.php",
       data: {pass:pass},
       success: function (response) {
         if(response == "ok"){
-        window.location.href = "http://localhost/Licenta-Varadi_Patricia2023/index.php";
+        window.location.href = "http://localhost/Licenta-Varadi_Patricia2023/webpage/index.php";
         }
         else if (response == "no")
         {

@@ -95,7 +95,7 @@ $("#submit-button").on("click", function (e) {
   if (isValid) {
     $.ajax({
       type: "POST",
-      url: "http://localhost/Licenta-Varadi_Patricia2023/sent.php",
+      url: "http://localhost/Licenta-Varadi_Patricia2023/webpage/sent.php",
       data: $("#input-form").serialize(),
       success: function (response) {
         if (response == "exists") {
@@ -106,7 +106,7 @@ $("#submit-button").on("click", function (e) {
             // User clicked "OK"
             $.ajax({
               type: "POST",
-              url: "http://localhost/Licenta-Varadi_Patricia2023/update.php",
+              url: "http://localhost/Licenta-Varadi_Patricia2023/webpage/update.php",
               data: $("#input-form").serialize(),
               success: function (response) {
                 $("#result").text("Succes");
@@ -122,7 +122,7 @@ $("#submit-button").on("click", function (e) {
         } else if (response == "go") {
           $.ajax({
             type: "POST",
-            url: "http://localhost/Licenta-Varadi_Patricia2023/ajax.php",
+            url: "http://localhost/Licenta-Varadi_Patricia2023/webpage/ajax.php",
             data: $("#input-form").serialize(),
             success: function (response) {
               $("#result").text("Succes");

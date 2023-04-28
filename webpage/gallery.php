@@ -27,7 +27,7 @@ if(mysqli_num_rows($res)>0){
     while($images=mysqli_fetch_assoc($res)){?>
                 
         <div class="column">
-            <img src="uploads/<?=$images['image_url']?>" style="width: 100%;">
+            <img src="../uploads/<?=$images['image_url']?>" style="width: 100%;">
             <?php if ($is_admin): ?>
             <form class="delete_img" action="delete_image.php" method="post">
                 <input type="hidden" name="image_id" value="<?=$images['id']?>">

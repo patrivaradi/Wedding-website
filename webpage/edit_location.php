@@ -39,7 +39,7 @@ $("#submit-button").on("click", function (e) {
   e.preventDefault(); // prevent default form submission behavior
     $.ajax({
         type: "POST",
-        url: "http://localhost/Licenta-Varadi_Patricia2023/editlocation.php",
+        url: "http://localhost/Licenta-Varadi_Patricia2023/webpage/editlocation.php",
         data: $("#input-form").serialize(),
         success: function (response) {
         $("#result").text("Succes");

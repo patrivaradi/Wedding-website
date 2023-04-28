@@ -1,0 +1,50 @@
+/* LOCATION STYLING */
+.location-container {
+  padding: 25px;
+  position: relative;
+  background-color: rgba(12, 98, 112, 0.5);
+}
+.location-heading {
+  font-size: 80px;
+  font-style: oblique;
+  font-weight: 500;
+}
+#details {
+  font-size: 25px;
+  font-variant-caps: small-caps;
+  width: 200px;
+}
+#specifics {
+  font-size: 20px;
+  font-weight: 600;
+}
+#specifics a {
+  text-decoration: none;
+  border: 2px solid #ffffff42;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  background-color: #9ab8ba42;
+  color: #13282b;
+  padding: 5px 15px;
+}
+/* RESPONSIVE */
+@media (max-width: 820px) {
+  .location-heading {
+    font-size: 55px;
+  }
+  #specifics {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 576px) {
+  .location-heading {
+    font-size: 40px;
+  }
+  #details {
+    width: 100%;
+  }
+  #specifics {
+    font-size: 16px;
+  }
+}

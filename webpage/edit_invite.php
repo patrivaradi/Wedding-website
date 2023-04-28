@@ -31,7 +31,7 @@ $("#submit-button").on("click", function (e) {
 
     $.ajax({
         type: "POST",
-        url: "http://localhost/Licenta-Varadi_Patricia2023/editinvite.php",
+        url: "http://localhost/Licenta-Varadi_Patricia2023/webpage/editinvite.php",
         data: $("#input-form").serialize(),
         success: function (response) {
         $("#result").text("Succes");

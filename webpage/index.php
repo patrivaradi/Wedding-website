@@ -33,7 +33,7 @@ include('gallery.php');
 <hr class="five" id="footer-section"/>
     <!-- Contact section -->
     <footer>
-        <img src="./images/logo.png" style="size:65px">
+        <img src="../images/logo.png" style="size:65px">
         <p>Website made by Varadi Patricia</p>
 
     </footer>

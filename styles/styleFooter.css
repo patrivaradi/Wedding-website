@@ -1,0 +1,32 @@
+/* FOOTER STYLING */
+footer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #02232c;
+  padding: 25px;
+}
+footer img {
+  margin: 10px;
+  width: 250px;
+  border-radius: 110%;
+  -webkit-border-radius: 110%;
+  -moz-border-radius: 110%;
+  -ms-border-radius: 110%;
+  -o-border-radius: 110%;
+  animation: spin 9000ms linear infinite;
+}
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
