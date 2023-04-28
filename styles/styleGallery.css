@@ -3,8 +3,8 @@
   display: flexbox;
   position: relative;
   width: 100%;
-  background-color: rgba(12, 98, 112, 0.2);
-  color: #03414b;
+  background-color: var(--gal-bg);
+  color: var(--gal-color);
 }
 .gallery-header {
   text-align: center;
@@ -38,12 +38,12 @@
   height: 90%;
 }
 #uplimg {
-  color: #41818b;
+  color: var(--abt-us-bg);
   width: 200px;
 }
 #uplsubmit {
-  background-color: #6da7b0;
-  border: 1px solid #03414b;
+  background-color: var(--nav-hover-color);
+  border: 1px solid var(--gal-color);
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;

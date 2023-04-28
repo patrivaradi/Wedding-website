@@ -20,7 +20,7 @@
         <div><p id="seconds">00</p><span>Seconds</span></div>
     </div>
     
-    <a href="#rsvp-section" class="nav-link">RSVP<span>⮟</span></a> 
+    <a href="#rsvp-section" class="rsvp-jump">RSVP<span>⮟</span></a> 
 </div>
 
 <script>

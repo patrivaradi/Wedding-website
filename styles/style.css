@@ -7,6 +7,40 @@ body {
   height: 100vh;
   width: fit-content;
 }
+:root {
+  --nav-bar-color: #ebcbc369;
+  --nav-brand-color: #463b35;
+  --nav-hover-color: #97786d;
+  --nav-dd-bg: #463b35e5;
+  --nav-dd-color: #f0f8ff;
+  --nav-dd-hover: #a57c6d;
+  --inv-bg: #e3d5caaf;
+  --inv-name-color: #463b35;
+  --abt-us-bg: #c5b3a5;
+  --abt-us-color: #302926;
+  --loc-bg: #e3d5ca;
+  --loc-map-border: #ffffff42;
+  --loc-map-bg: #d6ccc242;
+  --gal-bg: #ab9086cd;
+  --gal-color: #463b35;
+  --rsvp-bg: #61473bb5;
+  --ftr-bg: #a580738f;
+
+  --edit-butt-bg-color: #ab9086;
+  --edit-butt-shadow: #30211a;
+  --modal-bg: #3d2e26e6;
+}
+
+select {
+  border: 1px solid #13282b;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  background-color: #ffffff78;
+}
+
 hr {
   height: 55px;
   margin: 0;
@@ -15,22 +49,22 @@ hr {
   opacity: 100;
 }
 hr.zero {
-  background: linear-gradient(#ffffff, #a6cfd5);
+  background: linear-gradient(#ffffff, var(--inv-bg));
 }
 hr.one {
-  background: linear-gradient(#a6cfd5, #41818b);
+  background: linear-gradient(var(--inv-bg), var(--abt-us-bg));
 }
 hr.two {
-  background: linear-gradient(#41818b, rgba(12, 98, 112, 0.5));
+  background: linear-gradient(var(--abt-us-bg), var(--loc-bg));
 }
 hr.three {
-  background: linear-gradient(rgba(12, 98, 112, 0.5), rgba(12, 98, 112, 0.2));
+  background: linear-gradient(var(--loc-bg), var(--gal-bg));
 }
 hr.four {
-  background: linear-gradient(rgba(12, 98, 112, 0.2), #37616798);
+  background: linear-gradient(var(--gal-bg), var(--rsvp-bg));
 }
 hr.five {
-  background: linear-gradient(#37616798, #ffffff);
+  background: linear-gradient(var(--rsvp-bg), var(--ftr-bg));
 }
 /* FORM STYLING */
 form {
@@ -46,14 +80,14 @@ textarea {
   display: block;
   margin: 0;
   padding: 8px;
-  border: 1px solid #13282b;
+  border: 1px solid var(--nav-dd-hover);
   border-radius: 10px;
 }
 .form-about {
   height: fit-content;
   width: 500px;
   position: absolute;
-  background-color: aliceblue;
+  background-color: var(--inv-bg);
   border-radius: 20px;
   position: relative;
   padding: 50px;
@@ -72,14 +106,14 @@ textarea {
   display: block;
   margin: 18px 0 auto;
   padding: 8px;
-  border: 1px solid #13282b;
+  border: 1px solid var(--nav-dd-hover);
   border-radius: 10px;
 }
 .form-group {
   height: 500px;
   width: 500px;
   position: absolute;
-  background-color: aliceblue;
+  background-color: var(--inv-bg);
   border-radius: 20px;
   position: relative;
   padding: 50px;
@@ -93,12 +127,12 @@ textarea {
   right: 10px;
   font-size: 40px;
   font-weight: 900;
-  color: #13282b;
+  color: var(--nav-dd-hover);
   transform: rotate(45deg);
   cursor: pointer;
 }
 .close:hover {
-  color: #13282b;
+  color: var(--nav-dd-hover);
   font-weight: bold;
   transition: 0.3s ease;
 }

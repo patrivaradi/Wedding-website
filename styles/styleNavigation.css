@@ -3,14 +3,14 @@ li {
   list-style: none;
 }
 a.nav-link {
-  color: #02232c;
+  color: var(--nav-brand-color);
   font-size: 18px;
   font-weight: 600;
 }
 a.nav-link:hover {
   width: 100%;
   text-decoration: underline;
-  color: #6da7b0;
+  color: var(--nav-hover-color);
   font-weight: 900;
   transition: 0.6s;
 }
@@ -22,7 +22,7 @@ header {
 .navigation-bar {
   position: fixed;
   width: 100%;
-  background-color: rgba(181, 214, 219, 0.411);
+  background-color: var(--nav-bar-color);
   backdrop-filter: blur(5px);
   left: 0;
 }
@@ -38,7 +38,7 @@ header {
   font-size: 20px;
   font-weight: 700;
   text-decoration: none;
-  color: #02232c;
+  color: var(--nav-brand-color);
   position: absolute;
   left: 15px;
   align-items: center;
@@ -52,7 +52,7 @@ header {
   margin-bottom: 0;
 }
 .toggle-button {
-  color: #02232c;
+  color: var(--nav-brand-color);
   font-size: 25px;
   cursor: pointer;
   display: none;
@@ -65,7 +65,7 @@ header {
   top: 54px;
   right: 0;
   width: 50%;
-  background-color: rgba(3, 65, 75, 0.897);
+  background-color: var(--nav-dd-bg);
   backdrop-filter: blur(10px);
   overflow: hidden;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -80,12 +80,12 @@ header {
   justify-content: center;
 }
 .dropdown-menu .nav-link {
-  color: aliceblue;
+  color: var(--nav-dd-color);
   text-decoration: none;
   display: flex;
 }
 .dropdown-menu a.nav-link:hover {
-  color: #13282b;
+  color: var(--nav-dd-hover);
   font-weight: 900;
   transition: 0.6s;
   align-items: center;

@@ -22,6 +22,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
+    <link rel="stylesheet" type="text/css" href="../styles/theme.css">
     <link rel="stylesheet" type="text/css" href="../styles/styleNavigation.css">
     <link rel="stylesheet" type="text/css" href="../styles/styleInvitation.css">
     <link rel="stylesheet" type="text/css" href="../styles/styleAboutUs.css">

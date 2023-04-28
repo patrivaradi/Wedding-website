@@ -10,8 +10,8 @@
 .about-us {
   margin: auto;
   width: 100%;
-  background: #41818b;
-  color: rgb(242, 245, 248);
+  background: var(--abt-us-bg);
+  color: var(--abt-us-color);
   height: 100%;
 }
 .about-us-text {
@@ -43,10 +43,10 @@
 }
 @keyframes moveup {
   0% {
-    color: #41818b;
+    color: var(--abt-us-bg);
   }
   100% {
-    color: rgb(242, 245, 248);
+    color: var(--abt-us-color);
   }
 }
 .about-pic {
@@ -67,7 +67,7 @@
 .about-image.active-pic {
   width: 175px;
   height: 175px;
-  border: 5px double rgb(242, 245, 248);
+  border: 5px double var(--abt-us-color);
 }
 /* RESPONSIVE */
 @media (max-width: 820px) {

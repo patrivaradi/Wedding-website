@@ -5,8 +5,8 @@ footer {
   text-align: center;
   flex-direction: column;
   justify-content: center;
-  background-color: #ffffff;
-  color: #02232c;
+  background-color: var(--ftr-bg);
+  color: var(--nav-brand-color);
   padding: 25px;
 }
 footer img {

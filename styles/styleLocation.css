@@ -2,7 +2,7 @@
 .location-container {
   padding: 25px;
   position: relative;
-  background-color: rgba(12, 98, 112, 0.5);
+  background-color: var(--loc-bg);
 }
 .location-heading {
   font-size: 80px;
@@ -20,11 +20,11 @@
 }
 #specifics a {
   text-decoration: none;
-  border: 2px solid #ffffff42;
+  border: 2px solid var(--loc-map-border);
   border-radius: 10px;
   -webkit-border-radius: 10px;
-  background-color: #9ab8ba42;
-  color: #13282b;
+  background-color: var(--loc-map-bg);
+  color: var(--nav-dd-hover);
   padding: 5px 15px;
 }
 /* RESPONSIVE */
