@@ -13,10 +13,6 @@ $tmp_name = $_FILES['uplimg']['tmp_name'];
 $error = $_FILES['uplimg']['error'];
 
 if($error === 0){
-    if($img_size > 125000){
-        $error_message ="Sorry, your file is too large";
-        header("location:index.php?error=$error_message");
-    }else {
         $img_ex = pathinfo($img_name, PATHINFO_EXTENSION);
         $img_ex_lc = strtolower($img_ex);
 
@@ -35,7 +31,7 @@ if($error === 0){
             $error_message ="You can't upload files of this type!";
             header("location:index.php?error=$error_message");
         }
-    }
+    
 }else {
     $error_message ="unknown error occured";
     header("location:index.php?error=$error_message");

@@ -6,20 +6,29 @@
         $pass = trim($pass);
         $pass = md5($pass);
         $pass = mysqli_real_escape_string($con,$pass);
-        $query = "SELECT `pass` FROM `passwords` WHERE `name`='invited'";
+        $query = "SELECT `pass` FROM `passwords`";
         $result=$con->query($query);
         
-        if($result){
-            $row = $result -> fetch_assoc();
-            $password =$row['pass'];
-            if($password===$pass){
-            // the password matches
-            $_SESSION['loggedin'] = true;
-            echo 'ok';
-            } else {
-                echo 'no';
-            }	
+        if($result->num_rows>0){
+            while($row=$result->fetch_assoc()){
+            
+                $password =$row['pass'];
+                if($password===$pass){
+                // the password matches
+                session_start();
+                $_SESSION['loggedin'] = true;
+                $_SESSION['password']=$pass;
+                echo 'ok';
+                mysqli_close($con);
+                exit;
+                    }
+            } 
+            echo 'no';
         }
-    mysqli_close($con);
+            else {
+                echo 'error';
+            }	
+        
+        mysqli_close($con);
  }
  ?>

@@ -31,9 +31,6 @@ include('header.php');
 $("#submit-button").on("click", function (e) {
   e.preventDefault(); // prevent default form submission behavior
 
-  var her_story = $("#edit-story-her").val();
-  var his_story = $("#edit-story-him").val();
-
     $.ajax({
         type: "POST",
         url: "http://localhost/Licenta-Varadi_Patricia2023/editabout.php",
