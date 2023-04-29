@@ -5,7 +5,7 @@
     <?php endif; ?>
     <!-- <button class="party">Party!!</button> -->
     <?php
-    $sql="SELECT * FROM `invitation`";
+    $sql="SELECT * FROM `invitation` ORDER BY `invitation`.`id` DESC LIMIT 1;";
     $res = mysqli_query($con,$sql);
     if(mysqli_num_rows($res)>0){
         $row=mysqli_fetch_assoc($res)?>

@@ -25,10 +25,6 @@ include('header.php');
 $("#submit-button").on("click", function (e) {
   e.preventDefault(); // prevent default form submission behavior
 
-  var name = $("#edit-name").val();
-  var text = $("#edit-text").val();
-  var date = $("#edit-date").val();
-
     $.ajax({
         type: "POST",
         url: "http://localhost/Licenta-Varadi_Patricia2023/webpage/editinvite.php",

@@ -5,7 +5,7 @@
 <div class="about-us-container">
     <div class="about-us" >
         <?php
-    $sql="SELECT * FROM `stories`";
+    $sql="SELECT * FROM `stories` ORDER BY `stories`.`id` DESC LIMIT 1";
     $res = mysqli_query($con,$sql);
     if(mysqli_num_rows($res)>0){
         $row=mysqli_fetch_assoc($res)?>
