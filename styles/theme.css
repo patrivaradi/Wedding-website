@@ -1,4 +1,8 @@
 .dark-theme {
+  --first-bg-color: #2f3334;
+  --first-text-color: #dfdfdf;
+  --first-button-color: #1d1c1c;
+
   --nav-bar-color: #3f424669;
   --nav-brand-color: #0f0f0f;
   --nav-hover-color: #f4f7f9;
@@ -22,7 +26,7 @@
   --modal-bg: #f4f7f9e6;
 }
 .pink-theme {
-  --nav-bar-color: #b5d6db69;
+  --nav-bar-color: #fd8bc869;
   --nav-brand-color: #02232c;
   --nav-hover-color: #6da7b0;
   --nav-dd-bg: #03414be5;

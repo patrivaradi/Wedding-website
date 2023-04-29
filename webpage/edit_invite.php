@@ -1,6 +1,13 @@
 <?php
 include('header.php');
-?>
+include('db_connection.php');
+$sql="SELECT `theme` FROM `passwords` WHERE `name`='invited'";
+$res = mysqli_query($con,$sql);
+if(mysqli_num_rows($res)>0){
+    $row=mysqli_fetch_assoc($res)?>
+<body class="<?=$row['theme']?>">
+<?php }
+    ?> 
 <div class="bg-modal">
     <div class="modal-contents" >
         <form id="input-form">

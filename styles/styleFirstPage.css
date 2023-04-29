@@ -4,13 +4,13 @@
   font-family: "Cormorant Garamond", serif;
 }
 :root {
-  --bg-color: #376167;
-  --text-color: #ffff;
-  --button-color: #13282b;
+  --first-bg-color: #376167;
+  --first-text-color: #ffff;
+  --first-button-color: #13282b;
 }
 body {
   height: 100vh;
-  background-color: var(--bg-color);
+  background-color: var(--first-bg-color);
 }
 .first-page {
   width: 100%;
@@ -30,7 +30,7 @@ body {
 .password-text {
   line-height: 100px;
   font-size: 30px;
-  color: var(--text-color);
+  color: var(--first-text-color);
   font-style: italic;
 }
 #pass {
@@ -48,6 +48,6 @@ body {
   padding: 5px 25px;
   font-weight: 600;
   border-radius: 7px;
-  color: var(--button-color);
-  background-color: var(--text-color);
+  color: var(--first-button-color);
+  background-color: var(--first-text-color);
 }

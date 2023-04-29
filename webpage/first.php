@@ -21,10 +21,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../styles/styleFirstPage.css">
+    <link rel="stylesheet" type="text/css" href="../styles/styleFirstPage.css">
+    <link rel="stylesheet" type="text/css" href="../styles/theme.css">
     <title>Wedding website</title>
 </head>
-<body>
+<?php
+include('db_connection.php');
+$sql="SELECT `theme` FROM `passwords` WHERE `name`='invited'";
+$res = mysqli_query($con,$sql);
+if(mysqli_num_rows($res)>0){
+    $row=mysqli_fetch_assoc($res)?>
+<body class="<?=$row['theme']?>">
+<?php }
+    ?> 
     <div class="first-page">
         <form>
         <div class="password-div">

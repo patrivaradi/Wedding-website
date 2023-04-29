@@ -1,6 +1,13 @@
 <?php
 include('header.php');
-?>
+include('db_connection.php');
+$sql="SELECT `theme` FROM `passwords` WHERE `name`='invited'";
+$res = mysqli_query($con,$sql);
+if(mysqli_num_rows($res)>0){
+    $row=mysqli_fetch_assoc($res)?>
+<body class="<?=$row['theme']?>">
+<?php }
+    ?> 
 <div class="bg-modal">
     <div class="modal-contents">
         <form id="input-form" enctype="multipart/form-data">
@@ -27,6 +34,7 @@ include('header.php');
     </div>
 </div>
 <script>
+
     //-----------Insert edit <form> in database-------------------
 
 $("#submit-button").on("click", function (e) {
@@ -36,8 +44,6 @@ $("#submit-button").on("click", function (e) {
     let storyher = $("#story-her").val();
     let imghim = $("#uplimghim")[0].files;
     let storyhim = $("#story-him").val();
-
-
 
     if(imgher.length>0&&imghim.length>0){
         form_data.append('herimg',imgher[0]);
@@ -62,19 +68,6 @@ $("#submit-button").on("click", function (e) {
     }else{
         $("#errorms").text("Please select an image for both!");
     }
-
-    // $.ajax({
-    //     type: "POST",
-    //     url: "http://localhost/Licenta-Varadi_Patricia2023/webpage/editabout.php",
-    //     data: $("#input-form").serialize(),
-    //     success: function (response) {
-    //         alert($("#input-form").serialize());
-    //     $("#result").text("Succes");
-    //     $(".bg-modal").hide();
-    //     window.location.href = "index.php";
-    //     alert("Thank you!");
-    //     },
-    // });
 });
 
 </script>

@@ -2,7 +2,14 @@
 include('db_connection.php');
 
 ?>
-<body>
+<?php
+    $sql="SELECT `theme` FROM `passwords` WHERE `name`='invited'";
+    $res = mysqli_query($con,$sql);
+    if(mysqli_num_rows($res)>0){
+        $row=mysqli_fetch_assoc($res)?>
+<body class="<?=$row['theme']?>">
+    <?php }
+       ?> 
     <!-- Navigation bar -->
     <?php
     $sql="SELECT * FROM `invitation`";
@@ -25,19 +32,38 @@ include('db_connection.php');
                 <script>
                     function Changecolor() {
                         var ChosenTheme = document.getElementById("choose-theme").value;
-                        var bodyElement = document.body;
-                        var existingClasses = bodyElement.classList;
+                        localStorage.setItem('selectedTheme', ChosenTheme);
 
-                        // Remove any existing theme class from body element
-                        for (var i = 0; i < existingClasses.length; i++) {
-                            if (existingClasses[i].includes("-theme")) {
-                                bodyElement.classList.remove(existingClasses[i]);
+                        // Send selected theme to PHP file
+                        $.ajax({
+                            url: 'set_theme.php',
+                            type: 'POST',
+                            data: { chosenTheme: ChosenTheme },
+                            success: function(response) {
+                                // Set body classlist based on PHP response
+                                document.body.className = response;
                             }
-                        }
+                        });
+                        // // Remove any existing theme class from body element
+                        // for (var i = 0; i < existingClasses.length; i++) {
+                        //     if (existingClasses[i].includes("-theme")) {
+                        //         bodyElement.classList.remove(existingClasses[i]);
+                        //     }
+                        // }
                         
-                        document.body.classList.add(ChosenTheme);
-                        console.log(document.body.classList.toString());
+                        // document.body.classList.add(ChosenTheme);
+                        // console.log(document.body.classList.toString());
+
+                        
                     }
+                    // Set the saved theme on page load
+                    document.addEventListener("DOMContentLoaded", function(event) {
+                        var savedTheme = localStorage.getItem('selectedTheme');
+                        if (savedTheme) {
+                        document.getElementById("choose-theme").value = savedTheme;
+                        Changecolor();
+                        }
+                    });
                 </script>
             <?php endif; ?>
             <ul class="nav-links">
