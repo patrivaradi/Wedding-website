@@ -90,6 +90,10 @@
 }
 /* RESPONSIVE */
 @media (max-width: 768px) {
+  .edit-button {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
   .invitation {
     height: 100%;
   }
@@ -111,6 +115,12 @@
   }
 }
 @media (max-width: 576px) {
+  .edit-button {
+    top: 3px;
+    right: 10px;
+    font-size: 12px;
+    padding: 10px 20px;
+  }
   .invitation {
     height: 100%;
   }

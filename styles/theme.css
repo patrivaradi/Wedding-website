@@ -14,6 +14,7 @@
   --abt-us-bg: #2a2d2e;
   --abt-us-color: #f2f5f8;
   --loc-bg: #57666880;
+  --loc-color: #212426;
   --loc-map-border: #0d0d0e42;
   --loc-map-bg: #25282942;
   --gal-bg: #050505dd;
@@ -24,54 +25,70 @@
   --edit-butt-bg-color: #a8a8a8;
   --edit-butt-shadow: #f4f7f9;
   --modal-bg: #f4f7f9e6;
+
+  --pic-filter: grayscale(100%);
 }
 .pink-theme {
-  --nav-bar-color: #fd8bc869;
-  --nav-brand-color: #02232c;
-  --nav-hover-color: #6da7b0;
-  --nav-dd-bg: #03414be5;
-  --nav-dd-color: #f0f8ff;
-  --nav-dd-hover: #13282b;
-  --inv-bg: #a6cfd5;
-  --inv-name-color: #02232c;
-  --abt-us-bg: #41818b;
-  --abt-us-color: #f2f5f8;
-  --loc-bg: #0c627080;
-  --loc-map-border: #ffffff42;
-  --loc-map-bg: #9ab8ba42;
-  --gal-bg: #0c627033;
-  --gal-color: #03414b;
-  --rsvp-bg: #37616798;
-  --ftr-bg: #ffffff;
+  --first-bg-color: #d90c6fb2;
+  --first-text-color: #dfdfdf;
+  --first-button-color: #1d1c1d;
 
-  --edit-butt-bg-color: #9ab8ba;
-  --edit-butt-shadow: #13282b;
-  --modal-bg: #13282be6;
+  --nav-bar-color: #fd8bc869;
+  --nav-brand-color: #390038;
+  --nav-hover-color: #ad7cc2;
+  --nav-dd-bg: #c80067f4;
+  --nav-dd-color: #fff0f8;
+  --nav-dd-hover: #4b1d40;
+  --inv-bg: #ff2c99b1;
+  --inv-name-color: #3c0043;
+  --abt-us-bg: #a9055ab1;
+  --abt-us-color: #f8f2f5;
+  --loc-bg: #e62187cc;
+  --loc-color: #262124;
+  --loc-map-border: #ffffff42;
+  --loc-map-bg: #eacce142;
+  --gal-bg: #ff2c9960;
+  --gal-color: #620435;
+  --rsvp-bg: #d95298df;
+  --ftr-bg: #e99ac397;
+
+  --edit-butt-bg-color: #d62790;
+  --edit-butt-shadow: #2b1329;
+  --modal-bg: #2b1328e6;
 }
 .orange-theme {
-  --nav-bar-color: #b5d6db69;
-  --nav-brand-color: #02232c;
-  --nav-hover-color: #6da7b0;
-  --nav-dd-bg: #03414be5;
-  --nav-dd-color: #f0f8ff;
-  --nav-dd-hover: #13282b;
-  --inv-bg: #a6cfd5;
-  --inv-name-color: #02232c;
-  --abt-us-bg: #41818b;
-  --abt-us-color: #f2f5f8;
-  --loc-bg: #0c627080;
-  --loc-map-border: #ffffff42;
-  --loc-map-bg: #9ab8ba42;
-  --gal-bg: #0c627033;
-  --gal-color: #03414b;
-  --rsvp-bg: #37616798;
-  --ftr-bg: #ffffff;
+  --first-bg-color: #e6370cc3;
+  --first-text-color: #edcfbe;
+  --first-button-color: #4e1e02;
 
-  --edit-butt-bg-color: #9ab8ba;
-  --edit-butt-shadow: #13282b;
-  --modal-bg: #13282be6;
+  --nav-bar-color: #f4bba4c8;
+  --nav-brand-color: #711701;
+  --nav-hover-color: #b0716d;
+  --nav-dd-bg: #c42c11e5;
+  --nav-dd-color: #fff4f0;
+  --nav-dd-hover: #2b1913;
+  --inv-bg: #e64615cb;
+  --inv-name-color: #3f1203;
+  --abt-us-bg: #d74308;
+  --abt-us-color: #f2f5f8;
+  --loc-bg: #e0440ccd;
+  --loc-color: #240e02;
+  --loc-map-border: #ffffff67;
+  --loc-map-bg: #baa59a42;
+  --gal-bg: #d43e10bd;
+  --gal-color: #4b1503;
+  --rsvp-bg: #d74308d2;
+  --ftr-bg: #ffb590;
+
+  --edit-butt-bg-color: #d4a18e;
+  --edit-butt-shadow: #461502;
+  --modal-bg: #2b0a01e6;
 }
 .blue-theme {
+  --first-bg-color: #074f63;
+  --first-text-color: #dfdfdf;
+  --first-button-color: #1d1c1c;
+
   --nav-bar-color: #b5d6db69;
   --nav-brand-color: #02232c;
   --nav-hover-color: #6da7b0;
@@ -95,25 +112,29 @@
   --modal-bg: #13282be6;
 }
 .green-theme {
-  --nav-bar-color: #b5d6db69;
-  --nav-brand-color: #02232c;
-  --nav-hover-color: #6da7b0;
-  --nav-dd-bg: #03414be5;
-  --nav-dd-color: #f0f8ff;
-  --nav-dd-hover: #13282b;
-  --inv-bg: #a6cfd5;
-  --inv-name-color: #02232c;
-  --abt-us-bg: #41818b;
-  --abt-us-color: #f2f5f8;
-  --loc-bg: #0c627080;
-  --loc-map-border: #ffffff42;
-  --loc-map-bg: #9ab8ba42;
-  --gal-bg: #0c627033;
-  --gal-color: #03414b;
-  --rsvp-bg: #37616798;
-  --ftr-bg: #ffffff;
+  --first-bg-color: #145c3cbc;
+  --first-text-color: #dfdfdf;
+  --first-button-color: #043c26;
 
-  --edit-butt-bg-color: #9ab8ba;
-  --edit-butt-shadow: #13282b;
-  --modal-bg: #13282be6;
+  --nav-bar-color: #06b15e88;
+  --nav-brand-color: #013c2c;
+  --nav-hover-color: #6db080;
+  --nav-dd-bg: #378f5ee5;
+  --nav-dd-color: #f0fff9;
+  --nav-dd-hover: #132b21;
+  --inv-bg: #a6d5bc;
+  --inv-name-color: #022c15;
+  --abt-us-bg: #418b71;
+  --abt-us-color: #f2f8f5;
+  --loc-bg: #0c703e80;
+  --loc-map-border: #ffffff42;
+  --loc-map-bg: #9abaae42;
+  --gal-bg: #068d5b81;
+  --gal-color: #034b29;
+  --rsvp-bg: #0d975998;
+  --ftr-bg: #86c7aa;
+
+  --edit-butt-bg-color: #9abaae;
+  --edit-butt-shadow: #132b21;
+  --modal-bg: #132b21e6;
 }

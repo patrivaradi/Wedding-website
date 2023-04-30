@@ -7,7 +7,11 @@ body {
   height: 100vh;
   width: fit-content;
 }
-:root {
+.light-theme {
+  --first-bg-color: #97786d;
+  --first-text-color: #dfdfdf;
+  --first-button-color: #1d1c1c;
+
   --nav-bar-color: #ebcbc369;
   --nav-brand-color: #463b35;
   --nav-hover-color: #97786d;
@@ -19,6 +23,7 @@ body {
   --abt-us-bg: #c5b3a5;
   --abt-us-color: #302926;
   --loc-bg: #e3d5ca;
+  --loc-color: #351700;
   --loc-map-border: #ffffff42;
   --loc-map-bg: #d6ccc242;
   --gal-bg: #ab9086cd;
@@ -29,6 +34,8 @@ body {
   --edit-butt-bg-color: #ab9086;
   --edit-butt-shadow: #30211a;
   --modal-bg: #3d2e26e6;
+
+  --pic-filter: none;
 }
 
 select {

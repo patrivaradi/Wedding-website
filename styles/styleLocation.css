@@ -1,8 +1,9 @@
 /* LOCATION STYLING */
 .location-container {
-  padding: 25px;
+  padding: 45px 25px 25px 25px;
   position: relative;
   background-color: var(--loc-bg);
+  color: var(--loc-color);
 }
 .location-heading {
   font-size: 80px;

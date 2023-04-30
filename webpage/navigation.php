@@ -1,12 +1,9 @@
 <?php
 include('db_connection.php');
-
-?>
-<?php
-    $sql="SELECT `theme` FROM `passwords` WHERE `name`='invited'";
-    $res = mysqli_query($con,$sql);
-    if(mysqli_num_rows($res)>0){
-        $row=mysqli_fetch_assoc($res)?>
+$sql="SELECT `theme` FROM `passwords` WHERE `name`='invited'";
+$res = mysqli_query($con,$sql);
+if(mysqli_num_rows($res)>0){
+$row=mysqli_fetch_assoc($res)?>
 <body class="<?=$row['theme']?>">
     <?php }
        ?> 
@@ -19,15 +16,21 @@ include('db_connection.php');
     <header id="home-section">
         <div class="navigation-bar">
         <div class="navbar">
-            <a href="index.html" class="navbar-brand"><?=$row['names']?></a>
+            <a href="index.html" class="navbar-brand"><?=$row['names']?></a> 
+            <?php } ?>
             <?php if ($is_admin): ?>
+                <?php
+                    $sql="SELECT `theme` FROM `passwords` WHERE `name`='invited'";
+                    $res = mysqli_query($con,$sql);
+                    if(mysqli_num_rows($res)>0){
+                    $row=mysqli_fetch_assoc($res)?>
                 <select id="choose-theme" onchange="Changecolor()">
-                <option value="light-theme">Light</option>
-                <option value="dark-theme">Dark</option>
-                <option value="pink-theme">Pink</option>
-                <option value="orange-theme">Orange</option>
-                <option value="blue-theme">Blue</option>
-                <option value="green-theme">Green</option>
+                <option value="light-theme" <?= ($row['theme'] == 'light-theme') ? 'selected' : '' ?>>Light</option>
+                <option value="dark-theme" <?= ($row['theme'] == 'dark-theme') ? 'selected' : '' ?>>Dark</option>
+                <option value="pink-theme" <?= ($row['theme'] == 'pink-theme') ? 'selected' : '' ?>>Pink</option>
+                <option value="orange-theme" <?= ($row['theme'] == 'orange-theme') ? 'selected' : '' ?>>Orange</option>
+                <option value="blue-theme" <?= ($row['theme'] == 'blue-theme') ? 'selected' : '' ?>>Blue</option>
+                <option value="green-theme" <?= ($row['theme'] == 'green-theme') ? 'selected' : '' ?>>Green</option>
                 </select>
                 <script>
                     function Changecolor() {
@@ -44,17 +47,6 @@ include('db_connection.php');
                                 document.body.className = response;
                             }
                         });
-                        // // Remove any existing theme class from body element
-                        // for (var i = 0; i < existingClasses.length; i++) {
-                        //     if (existingClasses[i].includes("-theme")) {
-                        //         bodyElement.classList.remove(existingClasses[i]);
-                        //     }
-                        // }
-                        
-                        // document.body.classList.add(ChosenTheme);
-                        // console.log(document.body.classList.toString());
-
-                        
                     }
                     // Set the saved theme on page load
                     document.addEventListener("DOMContentLoaded", function(event) {
@@ -65,6 +57,7 @@ include('db_connection.php');
                         }
                     });
                 </script>
+                <?php } ?> 
             <?php endif; ?>
             <ul class="nav-links">
 
@@ -89,7 +82,5 @@ include('db_connection.php');
         </div>
         </div>
     </header>
-    <?php
-}
-?>
+   
     <hr class="zero"/>

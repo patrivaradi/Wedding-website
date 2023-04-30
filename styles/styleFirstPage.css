@@ -3,10 +3,10 @@
   padding: 0;
   font-family: "Cormorant Garamond", serif;
 }
-:root {
-  --first-bg-color: #376167;
-  --first-text-color: #ffff;
-  --first-button-color: #13282b;
+.light-theme {
+  --first-bg-color: #97786d;
+  --first-text-color: #dfdfdf;
+  --first-button-color: #1d1c1c;
 }
 body {
   height: 100vh;

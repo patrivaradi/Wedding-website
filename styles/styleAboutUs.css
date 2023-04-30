@@ -9,6 +9,7 @@
 }
 .about-us {
   margin: auto;
+  padding-top: 20px;
   width: 100%;
   background: var(--abt-us-bg);
   color: var(--abt-us-color);

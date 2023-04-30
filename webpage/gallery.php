@@ -31,7 +31,7 @@ if(mysqli_num_rows($res)>0){
             <?php if ($is_admin): ?>
             <form class="delete_img" action="delete_image.php" method="post">
                 <input type="hidden" name="image_id" value="<?=$images['id']?>">
-                <input type="submit" name="delete" value="Delete">
+                <input id="delete-button" type="submit" name="delete" value="Delete">
             </form>
             <?php endif; ?>
         </div>      
