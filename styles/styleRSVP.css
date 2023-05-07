@@ -14,12 +14,15 @@
 }
 .rsvp {
   font-weight: bold;
+  z-index: 1;
 }
 .rsvp-text {
+  z-index: 1;
   font-size: 25px;
   color: var(--inv-name-color);
 }
 .rsvp-button {
+  z-index: 1;
   align-items: center;
   font-size: 25px;
   font-weight: 600;
