@@ -12,6 +12,7 @@ footer {
 footer img {
   margin: 10px;
   width: 250px;
+  height: 250px;
   border-radius: 110%;
   -webkit-border-radius: 110%;
   -moz-border-radius: 110%;
@@ -28,5 +29,20 @@ footer img {
   to {
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+  }
+}
+/* RESPONSIVE */
+@media (max-width: 820px) {
+  footer img {
+    margin: 10px;
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 576px) {
+  footer img {
+    margin: 10px;
+    width: 75px;
+    height: 75px;
   }
 }

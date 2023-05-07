@@ -9,7 +9,7 @@ if(mysqli_num_rows($res)>0){
 <?php }
     ?> 
 <div class="bg-modal">
-    <div class="modal-contents" >
+    <div class="modal-contents" style=" overflow-y:scroll;">
         <form id="input-form">
             <div class="form-group">
                 <div id="result"></div>

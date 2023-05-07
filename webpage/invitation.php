@@ -3,7 +3,6 @@
     <?php if ($is_admin): ?>
     <button class="edit-button" id="rsvpButton" onclick="window.open('edit_invite.php','_self');">Edit invitation</button>
     <?php endif; ?>
-    <!-- <button class="party">Party!!</button> -->
     <?php
     $sql="SELECT * FROM `invitation` ORDER BY `invitation`.`id` DESC LIMIT 1;";
     $res = mysqli_query($con,$sql);

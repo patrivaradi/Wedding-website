@@ -9,23 +9,23 @@ if(mysqli_num_rows($res)>0){
 <?php }
     ?> 
 <div class="bg-modal">
-    <div class="modal-contents">
+    <div class="modal-contents" style=" overflow-y:scroll;">
         <form id="input-form" enctype="multipart/form-data">
             <div class="form-about">
                 <div id="result"></div>
-                <div class="close" onclick="window.open('index.php','_self');">+</div>
+                <div class="close" onclick="window.open('index.php#about-us-section','_self');">+</div>
                 
                 <label>Upload pictures of her</label>
                 <input id="uplimgher" type="file" name="uplimgher">
                 
                 <label>Her side of the story</label>
-                <textarea id="story-her" name="story-her" type="text" placeholder="write here her story" style="width: -webkit-fill-available;height: 150px;"></textarea>
+                <textarea id="story-her" name="story-her" type="text" placeholder="write here her story" style="width: -webkit-fill-available;height: 80px;"></textarea>
                 
                 <label>Upload pictures of him</label>
                 <input id="uplimghim" type="file" name="uplimghim">
                 
                 <label>His side of the story</label>
-                <textarea id="story-him" name="story-him" type="text" placeholder="write here his story" style="width: -webkit-fill-available;height: 150px;"></textarea>
+                <textarea id="story-him" name="story-him" type="text" placeholder="write here his story" style="width: -webkit-fill-available;height: 80px;"></textarea>
                 
                 <p id="errorms"></p>
                 <button class="rsvp-button" id="submit-button" type="submit" >Submit</button>

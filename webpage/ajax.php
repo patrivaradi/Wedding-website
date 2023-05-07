@@ -12,7 +12,12 @@ $nameErr = $emailErr = $numberErr ="";
     $message = mysqli_real_escape_string($con,$_POST['message']);
     $food = mysqli_real_escape_string($con,$_POST['food']);
 
-    $qry = "INSERT INTO `rsvp`(`name`, `email`, `attends`, `others-names`, `message`, `food-preference`) VALUES ('$name','$email','$number','$others','$message','$food')";
+    $sql="SELECT * FROM `invitation` ORDER BY `invitation`.`id` DESC LIMIT 1";
+    $res = mysqli_query($con,$sql);
+    if(mysqli_num_rows($res)>0){
+        $row=mysqli_fetch_assoc($res);
+        $wedding_of=$row['names'];}
+    $qry = "INSERT INTO `rsvp`(`name`, `email`, `attends`, `others-names`, `message`, `food-preference`, `wedding_of`) VALUES ('$name','$email','$number','$others','$message','$food','$wedding_of')";
     $insert = mysqli_query($con,$qry);
     if(!$insert){
         echo "There are some problems";

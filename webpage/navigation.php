@@ -9,14 +9,14 @@ $row=mysqli_fetch_assoc($res)?>
        ?> 
     <!-- Navigation bar -->
     <?php
-    $sql="SELECT * FROM `invitation`";
+    $sql="SELECT * FROM `invitation` ORDER BY `invitation`.`id` DESC LIMIT 1;";
     $res = mysqli_query($con,$sql);
     if(mysqli_num_rows($res)>0){
         $row=mysqli_fetch_assoc($res)?>
     <header id="home-section">
         <div class="navigation-bar">
         <div class="navbar">
-            <a href="index.html" class="navbar-brand"><?=$row['names']?></a> 
+            <a href="#home-section" class="navbar-brand"><?=$row['names']?></a> 
             <?php } ?>
             <?php if ($is_admin): ?>
                 <?php

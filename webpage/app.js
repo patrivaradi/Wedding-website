@@ -15,15 +15,6 @@ toggleButton.onclick = function () {
   toggleBIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
 };
 
-// TO DO - when resized dropdown menu needs to disappear
-// window.addEventListener('resize', checkDropDown());
-// window.onresize = checkDropDown();
-// function checkDropDown() {
-//     console.log(window.innerWidth)
-// // if(!window.innerWidth <= 768 && dropDownMenu.classList.contains('open')){
-// //     dropDownMenu.classList.remove('open');
-// };
-
 //------------- Closing dropdown menu if is clicked on ---------------------
 dropDlink.forEach((link) => {
   link.onclick = function () {

@@ -7,7 +7,7 @@
     $others = mysqli_real_escape_string($con,$_POST['others']);
     $message = mysqli_real_escape_string($con,$_POST['message']);
     $food = mysqli_real_escape_string($con,$_POST['food']);
-
+    
     $qry = "UPDATE `rsvp` SET `attends`='$number',`others-names` = '$others',`message`='$message',`food-preference`='$food' WHERE `name`='$name' AND `email`='$email'";
     $insert = mysqli_query($con,$qry);
     if(!$insert){

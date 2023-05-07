@@ -9,29 +9,36 @@ if(mysqli_num_rows($res)>0){
 <?php }
     ?> 
 <!-- <div id="rsvp-section" class="rsvp-section"> -->
-<div class="bg-modal">
+<div class="bg-modal" style=" overflow-y: scroll;">
     <div class="modal-contents" >
         
-        <form id="input-form">
-            <div class="form-group">
+        <form id="input-form" >
+            <div class="form-group" >
                 <div id="result"></div>
                 <div class="close" onclick="window.open('index.php#rsvp-section','_self');">+</div>
 
+                <label>Name</label>
                 <input id="form-name" name="name" type="text" placeholder="Name"/>
                 <div class="error-hint" id="name-error"></div>
-                
+
+                <label>E-mail</label>
                 <input id="form-mail" name="email" type="email" placeholder="E-mail"/>
                 <div class="error-hint" id="email-error"></div>
-                
+
+                <label>Nr of attendees</label>
                 <input id="form-nr" name="number" type="number" placeholder="Nr of attendees"/>
                 <div class="error-hint"  id="number-error"></div>
                 
+
                 <div class="others-names">
+                <label>List names of others attending</label>
                 <input id="form-other-names" name="other-names" type="text" placeholder="List names of others attending"/>
                 </div>
                 
+                <label>Send us a message, request a song..</label>
                 <input id="form-text" name="message" type="text" placeholder="Send us a message, request a song.." />
                 
+                <label>List any food restrictions</label>
                 <input id="form-food" name="food" type="text" placeholder="List any food restrictions" />
 
                 <button class="rsvp-button" id="submit-button" type="submit" >Submit</button>

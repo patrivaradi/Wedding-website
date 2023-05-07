@@ -21,7 +21,7 @@
 <!--Photo grid-->
 <div class="row" >
 <?php
-$sql="SELECT * FROM `images` ORDER BY `id`";
+$sql="SELECT `id`, `image_url` FROM `images` WHERE `image_url` LIKE 'IMG%' ORDER BY `id`";
 $res = mysqli_query($con,$sql);
 if(mysqli_num_rows($res)>0){
     while($images=mysqli_fetch_assoc($res)){?>
