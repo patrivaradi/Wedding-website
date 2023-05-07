@@ -8,6 +8,7 @@
     $res = mysqli_query($con,$sql);
     if(mysqli_num_rows($res)>0){
         $row=mysqli_fetch_assoc($res)?>
+        <img class="decor_img" src="../images/bg.jpg">
     <div class="invite-names"><?=$row['names']?></div>
     <p class="invite-text"><?=$row['text']?><br>
         <span class="invite-date"><?=date("jS \of M, Y",strtotime($row['date']))?></span><br>

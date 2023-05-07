@@ -1,5 +1,13 @@
 /* INVITATION */
+.decor_img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.5;
+}
+
 .edit-button {
+  z-index: 1;
   position: absolute;
   top: 10px;
   right: 20px;
@@ -39,18 +47,21 @@
   color: var(--inv-name-color);
   animation: slide_up 1.9s ease;
   -webkit-animation: slide_up 1.9s ease;
+  z-index: 1;
 }
 .invite-text {
   font-size: 35px;
   color: var(--inv-name-color);
   animation: slide_up 1.2s ease;
   -webkit-animation: slide_up 1.2s ease;
+  z-index: 1;
 }
 .invite-date {
   font-size: 40px;
   font-style: italic;
   font-weight: 600;
   color: var(--inv-name-color);
+  z-index: 1;
 }
 .countdown {
   display: flex;
@@ -61,6 +72,7 @@
 }
 .countdown div {
   padding: 20px;
+  z-index: 1;
 }
 .countdown p {
   font-size: 40px;

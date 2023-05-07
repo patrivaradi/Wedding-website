@@ -1,5 +1,6 @@
 <!-- Location section -->
 <div class="location-container">
+    <img class="decor2_img" src="../images/bg.jpg">
     <?php if ($is_admin): ?>
     <button class="edit-button" id="editButton" onclick="window.open('edit_location.php','_self');">Edit event details</button>
     <?php endif; ?>
@@ -12,6 +13,7 @@
     if(mysqli_num_rows($res)>0){
         $row=mysqli_fetch_assoc($res)?>
     <div class="location" >
+        
         <div class="row">
             <div class="col-sm-4" id="details"><h6>Time</h6></div>
             <div class="col-sm-8" id="specifics"><p><?=$row['time']?></p></div>

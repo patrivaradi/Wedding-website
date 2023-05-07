@@ -25,6 +25,7 @@ include('gallery.php');
 
     <!--RSVP Section-->
     <div class="rsvp-section">
+        <img class="decor_img" src="../images/bg.jpg">
         <?php if ($is_admin): ?>
         <button class="edit-button" id="rsvpButton" onclick="window.open('view_rsvp.php','_self');">View rsvps</button>
         <?php endif; ?>

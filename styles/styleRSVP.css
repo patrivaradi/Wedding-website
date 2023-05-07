@@ -1,5 +1,6 @@
 /* RSVP STYLING */
 .rsvp-section {
+  z-index: 0;
   height: 95vh;
   display: flex;
   padding: 100px;
