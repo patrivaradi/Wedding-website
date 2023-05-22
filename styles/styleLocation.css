@@ -18,21 +18,17 @@ img.decor2_img {
   font-size: 80px;
   font-style: oblique;
   font-weight: 500;
-  z-index: 1;
 }
 #details {
-  z-index: 1;
   font-size: 25px;
   font-variant-caps: small-caps;
   width: 200px;
 }
 #specifics {
-  z-index: 1;
   font-size: 20px;
   font-weight: 600;
 }
 #specifics a {
-  z-index: 1;
   text-decoration: none;
   border: 2px solid var(--loc-map-border);
   border-radius: 10px;

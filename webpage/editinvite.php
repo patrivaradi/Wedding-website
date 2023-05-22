@@ -1,5 +1,5 @@
 <?php   
-   if($_SERVER["REQUEST_METHOD"]=="POST"){               
+if($_SERVER["REQUEST_METHOD"]=="POST"){               
     include "db_connection.php";
     $name = mysqli_real_escape_string($con,$_POST['name']);
     $text = mysqli_real_escape_string($con,$_POST['text']);

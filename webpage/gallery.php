@@ -16,27 +16,25 @@
         <button class="btn active" onclick="two()">2</button>
         <button class="btn active" onclick="four()">4</button>
     </div>
-
-    
-<!--Photo grid-->
-<div class="row" >
-<?php
-$sql="SELECT `id`, `image_url` FROM `images` WHERE `image_url` LIKE 'IMG%' ORDER BY `id`";
-$res = mysqli_query($con,$sql);
-if(mysqli_num_rows($res)>0){
-    while($images=mysqli_fetch_assoc($res)){?>
-                
-        <div class="column">
-            <img src="../uploads/<?=$images['image_url']?>" style="width: 100%;">
-            <?php if ($is_admin): ?>
-            <form class="delete_img" action="delete_image.php" method="post">
-                <input type="hidden" name="image_id" value="<?=$images['id']?>">
-                <input id="delete-button" type="submit" name="delete" value="Delete">
-            </form>
-            <?php endif; ?>
-        </div>      
-<?php }
-       }?> 
+    <!--Photo grid-->
+    <div class="row" >
+    <?php
+    $sql="SELECT `id`, `image_url` FROM `images` WHERE `image_url` LIKE 'IMG%' ORDER BY `id`";
+    $res = mysqli_query($con,$sql);
+    if(mysqli_num_rows($res)>0){
+        while($images=mysqli_fetch_assoc($res)){?>
+                    
+            <div class="column">
+                <img src="../uploads/<?=$images['image_url']?>" style="width: 100%;">
+                <?php if ($is_admin): ?>
+                <form class="delete_img" action="delete_image.php" method="post">
+                    <input type="hidden" name="image_id" value="<?=$images['id']?>">
+                    <input id="delete-button" type="submit" name="delete" value="Delete">
+                </form>
+                <?php endif; ?>
+            </div>      
+    <?php }
+        }?> 
     </div>
 </div>
 <hr class="four" id="rsvp-section" />
