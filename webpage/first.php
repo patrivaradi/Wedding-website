@@ -34,15 +34,15 @@ if(mysqli_num_rows($res)>0){
 <body class="<?=$row['theme']?>">
 <?php }
     ?> 
-    <div class="first-page">
-        <form>
-        <div class="password-div">
-        <div class="password-text">Please input the password given to you in your invitation.</div>
-        <input id="pass" name="pass" type="password" placeholder="password"/>
-        <button class="button" id="button" type="submit" >Submit</button>
-        </div>
-        </form>
+<div class="first-page">
+    <form>
+    <div class="password-div">
+    <div class="password-text">Please input the password given to you in your invitation.</div>
+    <input id="pass" name="pass" type="password" placeholder="password"/>
+    <button class="button" id="button" type="submit" >Submit</button>
     </div>
+    </form>
+</div>
 
 <script>
     $("#button").on("click", function (e) {

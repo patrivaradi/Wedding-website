@@ -21,7 +21,7 @@
                 echo 'ok';
                 mysqli_close($con);
                 exit;
-                    }
+                }
             } 
             echo 'no';
         }

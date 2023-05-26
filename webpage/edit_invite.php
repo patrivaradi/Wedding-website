@@ -15,11 +15,14 @@ if(mysqli_num_rows($res)>0){
                 <div id="result"></div>
                 <div class="close" onclick="window.open('index.php','_self');">+</div>
                 <label>Names</label>
-                <input id="edit-name" name="name" type="text" placeholder="ex: Jim & Pam"/>
+                <input id="edit-name" require name="name" type="text" placeholder="ex: Jim & Pam"/>
+                <div class="error-hint" id="name-error"></div>
                 <label>Invitation text</label>
-                <input id="edit-text" name="text" type="text" placeholder="ex: Are getting married!"/>
+                <input id="edit-text" require name="text" type="text" placeholder="ex: Are getting married!"/>
+                <div class="error-hint" id="text-error"></div>
                 <label>Date of the wedding</label>
-                <input id="edit-date" name="date" type="date"/>
+                <input id="edit-date" require name="date" type="date"/>
+                <div class="error-hint" id="date-error"></div>
                 <button class="rsvp-button" id="submit-button" type="submit" >Submit</button>
             </div>
         </form>
@@ -31,7 +34,30 @@ if(mysqli_num_rows($res)>0){
 
 $("#submit-button").on("click", function (e) {
   e.preventDefault(); // prevent default form submission behavior
+    var names=$("#edit-name").val();
+    var text=$("#edit-text").val();
+    var date=$("#edit-date").val();
+    var isValid = true;
 
+    if (!names) {
+    $("#name-error").text("Please enter your names");
+    isValid = false;
+    } else {
+    $("#name-error").text("");
+    }
+    if (!text) {
+    $("#text-error").text("Please enter your text");
+    isValid = false;
+    } else {
+    $("#text-error").text("");
+    }
+    if (!date) {
+    $("#date-error").text("Please enter your date");
+    isValid = false;
+    } else {
+    $("#date-error").text("");
+    }
+if (isValid) {
     $.ajax({
         type: "POST",
         url: "http://localhost/Licenta-Varadi_Patricia2023/webpage/editinvite.php",
@@ -43,6 +69,7 @@ $("#submit-button").on("click", function (e) {
         alert("Thank you!");
         },
     });
+}
 });
 
 </script>

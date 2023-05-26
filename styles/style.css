@@ -103,7 +103,7 @@ textarea {
   display: flex;
 }
 label {
-  color: var(--nav-dd-color);
+  color: var(--abt-us-color);
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -146,9 +146,6 @@ textarea {
   color: var(--nav-dd-hover);
   font-weight: bold;
   transition: 0.3s ease;
-}
-input.invalid {
-  border: 1px solid rgb(193, 28, 28);
 }
 .error-hint {
   font-size: 12px;

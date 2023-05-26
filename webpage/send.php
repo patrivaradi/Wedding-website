@@ -8,7 +8,6 @@ if(mysqli_num_rows($res)>0){
 <body class="<?=$row['theme']?>">
 <?php }
     ?> 
-<!-- <div id="rsvp-section" class="rsvp-section"> -->
 <div class="bg-modal" style=" overflow-y: scroll;">
     <div class="modal-contents" >
         
