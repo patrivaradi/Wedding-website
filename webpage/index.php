@@ -4,12 +4,12 @@ include('db_connection.php');
 // Check if the user is logged in as an admin
 $is_admin = false;
 if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true) {
-    $query = "SELECT `pass` FROM `passwords` WHERE `name`='admin'";
+    $query = "SELECT `id` FROM `passwords` WHERE `name`='admin'";
     $result = $con->query($query);
     if ($result) {
         $row = $result->fetch_assoc();
-        $password = $row['pass'];
-        if ($_SESSION['password'] === $password) {
+        $admin_id = $row['id'];
+        if ($_SESSION['id']===$admin_id) {
             $is_admin = true;
         }
     }

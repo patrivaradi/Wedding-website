@@ -46,6 +46,8 @@ select {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   background-color: #ffffff78;
+  position: absolute;
+  left: 122px;
 }
 
 hr {

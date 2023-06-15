@@ -58,6 +58,7 @@ $row=mysqli_fetch_assoc($res)?>
                     });
                 </script>
                 <?php } ?> 
+                
             <?php endif; ?>
             <ul class="nav-links">
 
@@ -68,6 +69,9 @@ $row=mysqli_fetch_assoc($res)?>
                 <li ><a href="#rsvp-section" class="nav-link">RSVP</a></li>
                 <li ><a href="#footer-section" class="nav-link">Footer</a></li>
                 <li ><a href="first.php" class="nav-link">Log out</a></li>
+                <?php if ($is_admin): ?>
+                <button class="edit-pass-button" id="edit_password" onclick="window.open('edit_pass.php','_self');">Edit password</button>
+                <?php endif; ?>
             </ul>
             <div class="toggle-button"><i class="fa-solid fa-bars"></i></div>
         </div>
@@ -79,6 +83,9 @@ $row=mysqli_fetch_assoc($res)?>
             <li ><a href="#rsvp-section" class="nav-link">RSVP</a></li>
             <li ><a href="#footer-section" class="nav-link">Footer</a></li>
             <li ><a href="first.php" class="nav-link">Log out</a></li>
+            <?php if ($is_admin): ?>
+            <button class="edit-pass-button" id="edit_password" onclick="window.open('edit_pass.php','_self');">Edit password</button>
+            <?php endif; ?>
         </div>
         </div>
     </header>
