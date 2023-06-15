@@ -11,13 +11,13 @@
         if($result->num_rows>0){
             while($row=$result->fetch_assoc()){
             
-                $password =$row['pass'];
-                $id=$row['id'];
-                if(password_verify($pass,$password)){
+                $db_pass =$row['pass'];
+                $db_user=$row['id'];
+                if(password_verify($pass,$db_pass)){
                 // the password matches
                 session_start();
                 $_SESSION['loggedin'] = true;
-                $_SESSION['id']=$id;
+                $_SESSION['id']=$db_user;
                 echo 'ok';
                 mysqli_close($con);
                 exit;
